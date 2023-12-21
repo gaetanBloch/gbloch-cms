@@ -695,10 +695,15 @@ export interface ApiEducationEducation extends Schema.CollectionType {
     logo: Attribute.Media & Attribute.Required;
     honors: Attribute.String;
     degree: Attribute.String & Attribute.Required;
-    activities: Attribute.Text;
-    description: Attribute.Text;
     website: Attribute.String & Attribute.Required;
     location: Attribute.String & Attribute.Required;
+    description: Attribute.RichText;
+    activities: Attribute.RichText;
+    type: Attribute.Enumeration<
+      ['Contract', 'Permanent', 'Freelance', 'Intern']
+    > &
+      Attribute.Required &
+      Attribute.DefaultTo<'Permanent'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

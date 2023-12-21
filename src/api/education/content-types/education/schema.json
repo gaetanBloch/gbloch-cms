@@ -52,6 +52,17 @@
     },
     "activities": {
       "type": "richtext"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Contract",
+        "Permanent",
+        "Freelance",
+        "Intern"
+      ],
+      "required": true,
+      "default": "Permanent"
     }
   }
 }
