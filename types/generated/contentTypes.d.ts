@@ -728,6 +728,7 @@ export interface ApiSkillSkill extends Schema.CollectionType {
     singularName: 'skill';
     pluralName: 'skills';
     displayName: 'skill';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -760,6 +761,13 @@ export interface ApiSkillSkill extends Schema.CollectionType {
         };
       }> &
       Attribute.DefaultTo<'https://github.com/gaetanbloch'>;
+    index: Attribute.Integer &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
