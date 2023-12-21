@@ -117,7 +117,7 @@
       },
       "type": "string"
     },
-    "Permanent": {
+    "type": {
       "pluginOptions": {
         "i18n": {
           "localized": true

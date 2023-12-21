@@ -975,7 +975,7 @@ export interface ApiWorkWork extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    Permanent: Attribute.Enumeration<
+    type: Attribute.Enumeration<
       ['Contract', 'Permanent', 'Freelance', 'Intern']
     > &
       Attribute.Required &
