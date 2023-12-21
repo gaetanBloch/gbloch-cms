@@ -683,6 +683,7 @@ export interface ApiEducationEducation extends Schema.CollectionType {
     singularName: 'education';
     pluralName: 'educations';
     displayName: 'Education';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -697,6 +698,7 @@ export interface ApiEducationEducation extends Schema.CollectionType {
     activities: Attribute.Text;
     description: Attribute.Text;
     website: Attribute.String & Attribute.Required;
+    location: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
