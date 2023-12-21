@@ -761,7 +761,7 @@ export interface ApiSkillSkill extends Schema.CollectionType {
         };
       }> &
       Attribute.DefaultTo<'https://github.com/gaetanbloch'>;
-    index: Attribute.Integer &
+    index: Attribute.Decimal &
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {

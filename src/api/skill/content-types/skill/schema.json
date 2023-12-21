@@ -55,7 +55,7 @@
           "localized": true
         }
       },
-      "type": "integer",
+      "type": "decimal",
       "required": true
     }
   }
