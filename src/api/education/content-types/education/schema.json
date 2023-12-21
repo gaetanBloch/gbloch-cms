@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "educations",
+  "info": {
+    "singularName": "education",
+    "pluralName": "educations",
+    "displayName": "Education"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "institution": {
+      "type": "string",
+      "required": true
+    },
+    "startsate": {
+      "type": "date",
+      "required": true
+    },
+    "enddate": {
+      "type": "date",
+      "required": false
+    },
+    "logo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "honors": {
+      "type": "string"
+    },
+    "degree": {
+      "type": "string",
+      "required": true
+    },
+    "activities": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "website": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -677,6 +677,44 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiEducationEducation extends Schema.CollectionType {
+  collectionName: 'educations';
+  info: {
+    singularName: 'education';
+    pluralName: 'educations';
+    displayName: 'Education';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    institution: Attribute.String & Attribute.Required;
+    startsate: Attribute.Date & Attribute.Required;
+    enddate: Attribute.Date;
+    logo: Attribute.Media & Attribute.Required;
+    honors: Attribute.String;
+    degree: Attribute.String & Attribute.Required;
+    activities: Attribute.Text;
+    description: Attribute.Text;
+    website: Attribute.String & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::education.education',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::education.education',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiSkillSkill extends Schema.CollectionType {
   collectionName: 'skills';
   info: {
@@ -962,6 +1000,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::education.education': ApiEducationEducation;
       'api::skill.skill': ApiSkillSkill;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;
       'api::work.work': ApiWorkWork;
