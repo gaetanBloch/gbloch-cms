@@ -975,6 +975,16 @@ export interface ApiWorkWork extends Schema.CollectionType {
           localized: true;
         };
       }>;
+    Permanent: Attribute.Enumeration<
+      ['Contract', 'Permanent', 'Freelance', 'Intern']
+    > &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Attribute.DefaultTo<'Permanent'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

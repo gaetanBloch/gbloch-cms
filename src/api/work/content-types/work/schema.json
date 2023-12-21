@@ -116,6 +116,22 @@
         }
       },
       "type": "string"
+    },
+    "Permanent": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "Contract",
+        "Permanent",
+        "Freelance",
+        "Intern"
+      ],
+      "default": "Permanent",
+      "required": true
     }
   }
 }
