@@ -4,7 +4,8 @@
   "info": {
     "singularName": "education",
     "pluralName": "educations",
-    "displayName": "Education"
+    "displayName": "Education",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -24,12 +25,12 @@
       "required": false
     },
     "logo": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "honors": {
       "type": "string"
@@ -45,6 +46,10 @@
       "type": "text"
     },
     "website": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
       "type": "string",
       "required": true
     }
